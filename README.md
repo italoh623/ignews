@@ -1,6 +1,6 @@
 <h1 align="center">
 
-<img src="https://raw.githubusercontent.com/italoh623/ignews/main/public/images/avatar.svg" alt="rocketshoes" width="100px"/>ignews
+<img src="https://raw.githubusercontent.com/italoh623/ignews/main/public/images/avatar.svg" alt="rocketshoes" width="100px"/>ig.news
 
 </h1>
 
@@ -15,17 +15,44 @@ The project must be built with npm, so download it below if you don't have any i
 
 * **Npm** is distributed with Node.js which means that when you download Node.js, you automatically get npm installed on your computer. [Download Node.js](https://nodejs.org/en/download/)
 
-* **Yarn** is a package manager built by Facebook Team and seems to be faster than npm in general.  [Download Yarn](https://yarnpkg.com/en/docs/install)
+* **Yarn** is a package manager built by Facebook Team and seems to be faster than npm in general. [Download Yarn](https://yarnpkg.com/en/docs/install)
 
 
 To run this server you will need a node version 12.0.0 (minimum) 
+
+## Stripe
+
+This project uses Stripe api as Payment sistem so you'll neeed to create a [Stripe account](https://stripe.com/br) with a Product registred.
+
+### Stripe CLI
+
+Stripe CLI is a tools to recive stripe webhooks in 
+development environment. To install follow the [documentation](https://stripe.com/docs/stripe-cli).
+
+
+After you must run the following command in terminal to start to listen the webhooks:
+
+```
+$ stripe listen --forward-to localhost:3000/api/webhooks
+```
+
+Finally you must add this lines to `.env.local` file:
+
+```js
+STRIPE_API_KEY= // Api key
+NEXT_PUBLIC_STRIPE_PUBLIC_KEY= // Public key
+STRIPE_WEBHOOK_SECRET= // Webhook signing secret
+STRIPE_SUCCESS_URL=http://localhost:3000/posts
+STRIPE_CANCEL_URL=http://localhost:3000/
+```
+
 
 # How to Install
 
 * To download the project follow the instructions bellow:
 
 
-1. `git clone https://github.com/italoh623/rocketshoes.git`
+1. `git clone https://github.com/italoh623/ignews.git`
 
 2. `cd ignews`
 
