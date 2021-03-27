@@ -68,6 +68,10 @@ STRIPE_CANCEL_URL=http://localhost:3000/
 
 ![](https://raw.githubusercontent.com/italoh623/ignews/main/screenshots/home.png)
 
+* Posts Page
+
+![](https://raw.githubusercontent.com/italoh623/ignews/main/screenshots/posts.png)
+
 ***The application still is in development 🚧. Soon this file will be updated with the deploy of the app and new features***
 
 ---
