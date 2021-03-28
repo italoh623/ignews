@@ -1,6 +1,6 @@
 <h1 align="center">
 
-<img src="https://raw.githubusercontent.com/italoh623/ignews/main/public/images/avatar.svg" alt="rocketshoes" width="100px"/>ig.news
+<img src="https://raw.githubusercontent.com/italoh623/ignews/main/public/images/avatar.svg" alt="ig.news" width="100px"/>ig.news
 
 </h1>
 
@@ -44,6 +44,23 @@ NEXT_PUBLIC_STRIPE_PUBLIC_KEY= // Public key
 STRIPE_WEBHOOK_SECRET= // Webhook signing secret
 STRIPE_SUCCESS_URL=http://localhost:3000/posts
 STRIPE_CANCEL_URL=http://localhost:3000/
+```
+
+## Prismic
+
+[Prismic](https://prismic.io) is a Content Management System, a tool for editing online content.
+
+You must create a account and a new Type `Post` whith this format:
+
+![](https://raw.githubusercontent.com/italoh623/ignews/main/screenshots/prismic.png)
+
+You need to create a private key for your prismic repository. Go to `Settings >  API & Security > Repository ecurity` and select 'Private API'.
+
+Finally you must add this line to `.env.local` file:
+
+```js
+PRISMIC_API_ENDPOINT= // Api endpoint
+PRISMIC_ACCESS_TOKEN= // Api secret token
 ```
 
 
