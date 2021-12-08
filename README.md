@@ -63,6 +63,22 @@ PRISMIC_API_ENDPOINT= // Api endpoint
 PRISMIC_ACCESS_TOKEN= // Api secret token
 ```
 
+## FaunaDB
+
+[FaunaDB](https://fauna.com/) is a flexible transactional database delivered as a secure and scalable cloud API with native GraphQL
+
+You must create a account and a new database `Post` whith this collections and Indexes:
+
+![](https://raw.githubusercontent.com/italoh623/ignews/main/screenshots/faunaDB.png)
+
+You must to create a private key to acess your fauna database. Go to `Security >  Keys > + New Key` and select 'Private API'.
+
+Finally you must add this line to `.env.local` file:
+
+```js
+FAUNADB_KEY= // Api secret key
+```
+
 
 # How to Install
 
